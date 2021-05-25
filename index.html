@@ -4,8 +4,21 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
+  <header>
+    <h1> Self Care Center </h1>
+  </header>
   <body>
-  
+    <h2> Which type of message? </h2>
+    <div>
+      <input type="radio" id="affirmation" name="message" value="affirmation">
+      <label for="affirmation">Affirmation</label>
+      <input type="radio" id="mantra" name="message" value="mantra">
+      <label for="mantra">Mantra</label><br>
+      <button class="receive-message" id="receiveMessage">Receive Message</button>
+    </div>
+    <section class="message-box" id="messageBox">
+      <img src="assets/meditate.svg" alt="A stylized meditating man">
+    </section>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
