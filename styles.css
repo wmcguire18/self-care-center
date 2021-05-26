@@ -11,8 +11,17 @@ black - #000000;
 font-family: 'Quicksand', sans-serif;
 }
 
+h1 {
+  color: #ffffff;
+}
+
 h2 {
   color: #ffffff;
+}
+
+div {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 body {
@@ -20,6 +29,10 @@ body {
    height: 100vh;
    width: auto;
    margin: 0;
+}
+
+#messageBox {
+  background-color: #ffffff;
 }
 
 .meditate-logo {
