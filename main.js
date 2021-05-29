@@ -1,4 +1,5 @@
 var messageButton = document.querySelector(".receive-message");
+var clearButton = document.querySelector(".clear-message");
 var affirmationButton = document.querySelector("#affirmation");
 var mantraButton = document.querySelector("#mantra");
 var careDisplay = document.querySelector(".message-box");
@@ -35,23 +36,27 @@ var affirmations = [
 ];
 
 messageButton.addEventListener("click", displayCare);
+clearButton.addEventListener("click", removeCare);
 
 function displayCare() {
-  logo.classList.add("hidden");
+  clearButton.classList.remove("hidden");
   if (affirmationButton.checked) {
   careDisplay.innerText = `${affirmations[getRandomIndex(affirmations)]}`;
   } else if (mantraButton.checked) {
   careDisplay.innerText = `${mantras[getRandomIndex(mantras)]}`;
-  }
+} else if (!affirmationButton.checked && !mantraButton.checked){
+  alert("Please select a type of care.")
+}
+}
+
+function removeCare(){
+careDisplay.innerText = "";
+logo.src = 'assets/meditate.svg'
+document.getElementById('messageBox').appendChild(logo)
+clearButton.classList.add("hidden");
+
 }
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
-
-// Error handling and clear button
-// User should not be able to click the “Receive Message” button unless they have selected a message option.
-// The user can click a clear button, which clears the page of any message.
-// User should only be able to click the clear button if a message is visible.
-// When the clear button is clicked and the message is removed, the image of the meditation icon should re-appear.
-// If you’ve added other buttons or inputs, be sure to add some error handling for them as well.

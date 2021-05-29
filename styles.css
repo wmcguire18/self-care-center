@@ -78,3 +78,12 @@ justify-content: center;
   background-color: #134d71;
   color: #ffffff;
 }
+
+.clear-message {
+  background-color: #134d71;
+  color: #ffffff;
+}
+
+.hidden {
+  display: none!important;
+}
