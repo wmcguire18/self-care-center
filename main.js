@@ -4,6 +4,8 @@ var affirmationButton = document.querySelector("#affirmation");
 var mantraButton = document.querySelector("#mantra");
 var careDisplay = document.querySelector(".message-box");
 var logo = document.querySelector(".meditate-logo");
+var createButton = document.querySelector(".create-message");
+var careForm = document.querySelector(".care-form");
 
 var mantras = [
   "The truth is out there",
@@ -37,6 +39,7 @@ var affirmations = [
 
 messageButton.addEventListener("click", displayCare);
 clearButton.addEventListener("click", removeCare);
+createButton.addEventListener("click", viewCreate);
 
 function displayCare() {
   clearButton.classList.remove("hidden");
@@ -55,6 +58,11 @@ logo.src = 'assets/meditate.svg'
 document.getElementById('messageBox').appendChild(logo)
 clearButton.classList.add("hidden");
 
+}
+
+function viewCreate() {
+  careDisplay.classList.add("hidden");
+  careForm.classList.remove("hidden");
 }
 
 function getRandomIndex(array) {

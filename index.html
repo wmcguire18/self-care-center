@@ -15,11 +15,25 @@
       <input type="radio" id="mantra" name="message" value="mantra">
       <label for="mantra">mantra</label><br>
       <button class="receive-message" id="receiveMessage">Receive Message</button> <br>
+      <button class="create-message" id="createMessage">Create Message</button> <br>
       <button class="clear-message hidden" id="clearMessage">Clear Message</button>
     </div>
     <section class="message-box" id="messageBox">
       <img src="assets/meditate.svg" class="meditate-logo" alt="A stylized meditating man">
     </section>
+    <section class="care-form hidden">
+   <form>
+     <h2>Create your own Care!</h2>
+     <input type="radio" id="createAffirmation" name="option" value="affirmation">
+     <label for="affirmation">affirmation</label>
+     <input type="radio" id="createMantra" name="option" value="mantra">
+     <label for="mantra">mantra</label><br>
+     <label for="care-quote">input text</label>
+       <input type="text" name="care-quote" id="care-quote"><br>
+     <button class="make-care">Create my Care!</button>
+     <button class="show-main">Back to Main</button>
+  </form>
+ </section>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>

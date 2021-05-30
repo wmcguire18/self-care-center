@@ -77,13 +77,32 @@ justify-content: center;
 .receive-message {
   background-color: #134d71;
   color: #ffffff;
+  border-radius: .5em;
 }
 
 .clear-message {
   background-color: #134d71;
   color: #ffffff;
+  border-radius: .5em;
 }
 
+.create-message {
+  background-color: #134d71;
+  color: #ffffff;
+  border-radius: .5em;
+}
+
+.make-care {
+  background-color: #134d71;
+  color: #ffffff;
+  border-radius: .5em;
+}
+
+.show-main {
+  background-color: #134d71;
+  color: #ffffff;
+  border-radius: .5em;
+}
 .hidden {
   display: none!important;
 }
