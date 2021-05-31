@@ -6,6 +6,11 @@ var careDisplay = document.querySelector(".message-box");
 var logo = document.querySelector(".meditate-logo");
 var createButton = document.querySelector(".create-message");
 var careForm = document.querySelector(".care-form");
+var makeCare = document.querySelector(".make-care");
+var createAffirmation = document.querySelector("#createAffirmation");
+var createMantra = document.querySelector("#createMantra");
+var careQuote = document.querySelector("#careQuote");
+var currentCare;
 
 var mantras = [
   "The truth is out there",
@@ -40,6 +45,7 @@ var affirmations = [
 messageButton.addEventListener("click", displayCare);
 clearButton.addEventListener("click", removeCare);
 createButton.addEventListener("click", viewCreate);
+makeCare.addEventListener("click", createCare);
 
 function displayCare() {
   clearButton.classList.remove("hidden");
@@ -63,7 +69,24 @@ clearButton.classList.add("hidden");
 function viewCreate() {
   careDisplay.classList.add("hidden");
   careForm.classList.remove("hidden");
-}
+};
+
+function createCare(e) {
+  e.preventDefault();
+  var currentCare = careQuote.value;
+  if (createAffirmation.checked) {
+    affirmations.push(careQuote.value)
+  } else if (createMantra.checked) {
+    mantras.push(careQuote.value)
+  };
+  if (!createAffirmation.checked && !createMantra.checked) {
+    alert("Please select a type of care.")
+  }
+  careDisplay.classList.remove("hidden");
+  careForm.classList.add("hidden");
+  logo.classList.add("hidden");
+  careDisplay.innerText = currentCare;
+};
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
